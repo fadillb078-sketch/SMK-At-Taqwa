@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK AT-TAQWA Jakarta Pusat - Profil Resmi & Portal PPDB Online</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kemdikbud: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#1a73e8',
+                            600: '#0b57d0',
+                            700: '#0842a0',
+                            800: '#063277',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body { 
+            background-color: #042f2e; 
+            color: #1e293b;
+            /* Pattern Background Geometris Islami (SVG Arabesque Pattern) */
+            background-image: radial-gradient(rgba(16, 185, 129, 0.15) 1px, transparent 0), radial-gradient(rgba(217, 119, 6, 0.12) 1px, #042f2e 1px);
+            background-size: 24px 24px, 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+
+        .font-arabic { fontFamily: 'Amiri', serif; }
+
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #064e3b; }
+        ::-webkit-scrollbar-thumb { background: #059669; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased text-slate-800">
+
+    <!-- TOP SYSTEM BAR (GOLD & EMERALD ISLAMIC STYLE) -->
+    <div class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-amber-200 text-xs py-2 px-4 flex justify-between items-center border-b border-amber-600/40 sticky top-0 z-40 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse border border-amber-200"></span>
+                <span class="font-medium hidden sm:inline text-amber-100">Bismillah &bull; Portal Resmi Dapodik SMK AT-TAQWA &bull; Kemendikdasmen RI</span>
+                <span class="font-medium sm:hidden">SMK AT-TAQWA (Islamic Green)</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#ppdb-section" class="text-amber-400 hover:text-amber-300 hover:underline font-semibold flex items-center gap-1">
+                    <i data-lucide="user-plus" class="w-3.5 h-3.5"></i> PPDB <span id="top-bar-ppdb-year">2026/2027</span>
+                </a>
+                <span class="text-emerald-700">|</span>
+                <button onclick="openAdminModal()" class="flex items-center gap-1.5 hover:text-amber-200 transition text-xs bg-emerald-900/80 hover:bg-emerald-800 px-3 py-1 rounded-md border border-amber-500/40 font-medium text-amber-300 shadow-sm">
+                    <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-400"></i>
+                    <span>Admin Panel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container mx-auto px-4 py-6 max-w-7xl flex-grow space-y-8">
+
+        <!-- HEADER BANNER & IDENTITAS DENGAN TEMA ISLAMI -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-xl border-2 border-emerald-800/20 relative overflow-hidden">
+            
+            <!-- Ornamen Kebudayaan Islami Emas -->
+            <div class="absolute -right-8 -top-8 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 relative z-10">
+                <div>
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="bg-emerald-800 text-amber-300 text-xs font-bold px-3 py-0.5 rounded-full border border-amber-500/40 shadow-sm">NPSN: 20100131</span>
+                        <span class="bg-amber-500 text-emerald-950 text-xs font-bold px-3 py-0.5 rounded-full shadow-sm">Akreditasi A</span>
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-0.5 rounded-full hidden sm:inline-block">Berakhlak Mulia & Siap Kerja</span>
+                    </div>
+                    <h1 id="site-title" class="text-2xl sm:text-3xl font-bold tracking-tight text-emerald-950 flex items-center gap-2">
+                        <span>SMK AT TAQWA</span>
+                        <span class="text-amber-600 text-lg font-arabic font-normal">المدرسة المهنية التقوى</span>
+                    </h1>
+                    <p id="site-address" class="text-xs sm:text-sm text-slate-600 mt-1 flex items-center gap-1">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-emerald-700"></i>
+                        JL. RAJAWALI SELATAN VI NO. 18, Kec. Sawah Besar, Kota Adm. Jakarta Pusat, Prov. D.K.I. Jakarta
+                    </p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="#ppdb-section" class="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-emerald-950 font-bold text-sm rounded-xl shadow-md transition flex items-center gap-2 border border-amber-300">
+                        <i data-lucide="user-plus" class="w-4 h-4"></i> Daftar PPDB Online
+                    </a>
+                    <button onclick="openAdminModal()" class="px-4 py-2.5 bg-emerald-800 hover:bg-emerald-900 text-amber-200 font-semibold text-sm rounded-xl shadow-md transition flex items-center gap-2 border border-emerald-700">
+                        <i data-lucide="sliders" class="w-4 h-4"></i> Kelola Data
+                    </button>
+                </div>
+            </div>
+
+            <!-- GRID FOTO & METADATA -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <!-- Foto Gedung Sekolah -->
+                <div class="lg:col-span-6 relative rounded-2xl overflow-hidden bg-emerald-950 min-h-[260px] group border-2 border-emerald-700/40">
+                    <img id="school-img" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800" alt="Gedung SMK AT TAQWA" class="w-full h-full object-cover min-h-[260px] max-h-[340px] opacity-90 group-hover:scale-105 transition duration-500">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/20 to-transparent"></div>
+                    
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="font-bold text-sm text-amber-300 flex items-center gap-1.5">
+                            <i data-lucide="building" class="w-4 h-4"></i> Gedung Kampus SMK At-Taqwa
+                        </p>
+                        <p class="text-xs text-emerald-100">Kecamatan Sawah Besar, Jakarta Pusat</p>
+                    </div>
+
+                    <div class="absolute bottom-3 right-3 bg-emerald-950/80 backdrop-blur-md text-amber-400 px-2.5 py-1 rounded-md text-xs font-mono border border-amber-500/30">
+                        04/04/2012 09:41
+                    </div>
+                </div>
+
+                <!-- Kartu Metadata Identitas Kanan -->
+                <div class="lg:col-span-6 bg-gradient-to-br from-emerald-50 via-teal-50/50 to-emerald-100/60 rounded-2xl p-5 border border-emerald-200 grid grid-cols-2 gap-4 text-xs sm:text-sm">
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="star" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Akreditasi</span><span id="meta-akreditasi" class="font-bold text-emerald-950 text-base">A</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Status Sekolah</span><span id="meta-status" class="font-bold text-emerald-950 text-base">Swasta</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="hash" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">NPSN</span><span id="meta-npsn" class="font-bold text-emerald-800 text-base">20100131</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="flag" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Bentuk Pendidikan</span><span id="meta-bentuk" class="font-bold text-emerald-950 text-base">SMK</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="phone" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Telepon</span><span id="meta-telepon" class="font-bold text-emerald-800 text-base">0216406337</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="mail" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Email</span><span id="meta-email" class="font-bold text-emerald-800 text-base break-all">smkattaqwa.18@gmail.com</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="globe" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Website Sekolah</span><span id="meta-website" class="font-bold text-emerald-800 text-base">Lihat Laman</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-800 text-amber-300 flex items-center justify-center shrink-0 shadow-sm border border-amber-500/30"><i data-lucide="landmark" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Yayasan</span><span id="meta-yayasan" class="font-bold text-emerald-800 text-base">YAYASAN AT-TAQWA</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BARIS KOTAK UTILITAS DAPODIK -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-5 shadow-lg border border-emerald-800/20 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-emerald-100 text-xs">
+            <div class="pt-2 sm:pt-0 sm:px-2 flex items-center gap-3">
+                <i data-lucide="graduation-cap" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                <div><span class="text-slate-500 block">Daya Tampung</span><span id="top-daya-tampung" class="font-semibold text-slate-800 text-sm">—</span></div>
+            </div>
+            <div class="pt-2 sm:pt-0 sm:px-2 flex items-center gap-3">
+                <i data-lucide="home" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                <div><span class="text-slate-500 block">Ruang Kelas</span><span id="top-ruang-kelas" class="font-bold text-emerald-700 text-base">10</span></div>
+            </div>
+            <div class="pt-2 sm:pt-0 sm:px-2 flex items-center gap-3">
+                <i data-lucide="flask-conical" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                <div><span class="text-slate-500 block">Laboratorium</span><span id="top-laboratorium" class="font-bold text-emerald-700 text-base">1</span></div>
+            </div>
+            <div class="pt-2 sm:pt-0 sm:px-2 flex items-center gap-3">
+                <i data-lucide="book-open" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                <div><span class="text-slate-500 block">Perpustakaan</span><span id="top-perpustakaan" class="font-bold text-emerald-700 text-base">1</span></div>
+            </div>
+            <div class="pt-2 sm:pt-0 sm:px-2 flex items-center gap-3">
+                <i data-lucide="calendar" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                <div><span class="text-slate-500 block">Semester Data</span><span id="top-semester" class="font-semibold text-slate-800 text-sm">2026/2027 Gasal</span></div>
+            </div>
+            <div class="pt-2 sm:pt-0 sm:px-2 flex items-center gap-3">
+                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                <div><span class="text-slate-500 block">Daya Listrik</span><span id="top-listrik" class="font-semibold text-slate-800 text-sm">13.900 VA</span></div>
+            </div>
+            <div class="pt-2 sm:pt-0 sm:px-2 flex items-center gap-3">
+                <i data-lucide="map-pin" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                <div><span class="text-slate-500 block">Luas Tanah</span><span id="top-luas" class="font-semibold text-slate-800 text-sm">2.536 m²</span></div>
+            </div>
+        </div>
+
+        <!-- STATISTIK & KURIKULUM -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Statistik Sekolah -->
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-emerald-800/20">
+                <h3 class="font-bold text-emerald-950 text-lg mb-4 flex items-center gap-2 border-b border-emerald-100 pb-2">
+                    <i data-lucide="bar-chart-2" class="w-5 h-5 text-emerald-700"></i> Statistik Sekolah
+                </h3>
+                <div class="grid grid-cols-4 gap-4 divide-x divide-emerald-100 text-center">
+                    <div>
+                        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto mb-2"><i data-lucide="users" class="w-4 h-4"></i></div>
+                        <span class="text-xs text-slate-500 block">Guru</span>
+                        <span id="stat-guru" class="text-xl font-bold text-emerald-800">7</span>
+                    </div>
+                    <div>
+                        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto mb-2"><i data-lucide="user" class="w-4 h-4"></i></div>
+                        <span class="text-xs text-slate-500 block">Siswa Laki-laki</span>
+                        <span id="stat-siswa-lk" class="text-xl font-bold text-emerald-800">92</span>
+                    </div>
+                    <div>
+                        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto mb-2"><i data-lucide="user-check" class="w-4 h-4"></i></div>
+                        <span class="text-xs text-slate-500 block">Siswa Perempuan</span>
+                        <span id="stat-siswa-pr" class="text-xl font-bold text-emerald-800">106</span>
+                    </div>
+                    <div>
+                        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto mb-2"><i data-lucide="layout-grid" class="w-4 h-4"></i></div>
+                        <span class="text-xs text-slate-500 block">Rombongan</span>
+                        <span id="stat-rombel" class="text-xl font-bold text-emerald-800">9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kurikulum dan Utilitas -->
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-emerald-800/20">
+                <h3 class="font-bold text-emerald-950 text-lg mb-4 flex items-center gap-2 border-b border-emerald-100 pb-2">
+                    <i data-lucide="book" class="w-5 h-5 text-emerald-700"></i> Kurikulum dan Utilitas
+                </h3>
+                <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0"><i data-lucide="graduation-cap" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Kurikulum</span><span id="kurikulum-nama" class="font-semibold text-slate-800">SMK Merdeka Pemasaran</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0"><i data-lucide="wifi" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Akses Internet</span><span id="kurikulum-internet" class="font-semibold text-slate-800">Broadband</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0"><i data-lucide="clock" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Penyelenggaraan</span><span id="kurikulum-waktu" class="font-semibold text-slate-800">Pagi/5 hari</span></div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-4 h-4"></i></div>
+                        <div><span class="text-slate-500 block text-xs">Sumber Listrik</span><span id="kurikulum-listrik" class="font-semibold text-slate-800">PLN</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: PENGUMUMAN & AGENDA -->
+        <section class="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-emerald-800/20">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 pb-4 border-b border-emerald-100">
+                <div>
+                    <h3 class="font-bold text-emerald-950 text-xl flex items-center gap-2">
+                        <i data-lucide="bell" class="w-5 h-5 text-amber-500"></i> Pengumuman & Agenda Akademik
+                    </h3>
+                    <p class="text-xs text-slate-500 mt-1">Informasi penting mengenai kegiatan sekolah, jadwal ulangan, dan pengumuman resmi.</p>
+                </div>
+                <!-- Filter Tab -->
+                <div class="flex gap-2">
+                    <button onclick="filterAnnouncements('semua')" class="ann-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-800 text-amber-300 shadow-sm border border-amber-500/30" data-cat="semua">Semua</button>
+                    <button onclick="filterAnnouncements('Event')" class="ann-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200" data-cat="Event">Event</button>
+                    <button onclick="filterAnnouncements('Ulangan')" class="ann-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200" data-cat="Ulangan">Ulangan/Ujian</button>
+                </div>
+            </div>
+
+            <div id="announcement-display-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Dynamic Items -->
+            </div>
+        </section>
+
+        <!-- SECTION: SISTEM PPDB ONLINE -->
+        <section id="ppdb-section" class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-950 rounded-3xl p-6 sm:p-8 text-white shadow-2xl border-2 border-amber-500/30 relative overflow-hidden">
+            
+            <div class="max-w-3xl mb-8 relative z-10">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3.5 py-1 rounded-full border border-amber-500/40 inline-flex items-center gap-1.5">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Penerimaan Peserta Didik Baru <span id="display-ppdb-year">2026/2027</span>
+                    </span>
+                    <span id="ppdb-status-badge-public" class="bg-emerald-500 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                        STATUS: DIBUKA
+                    </span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold mt-2 text-amber-100">Pendaftaran PPDB Online SMK At-Taqwa</h2>
+                <p class="text-emerald-100 text-xs sm:text-sm mt-1">Isi formulir pendaftaran calon siswa baru atau periksa status penerimaan Anda secara langsung di bawah ini.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+                <!-- FORM PENDAFTARAN -->
+                <div class="lg:col-span-7 bg-white text-slate-800 rounded-2xl p-6 shadow-xl border border-emerald-100 relative">
+                    
+                    <!-- Overlay saat PPDB Ditutup -->
+                    <div id="ppdb-closed-overlay" class="hidden absolute inset-0 bg-slate-900/80 backdrop-blur-sm rounded-2xl z-20 flex flex-col items-center justify-center text-center p-6 text-white">
+                        <div class="w-14 h-14 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mb-3 border border-amber-400/30">
+                            <i data-lucide="lock" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-amber-300">Pendaftaran PPDB Sedang Ditutup</h4>
+                        <p class="text-xs text-slate-300 mt-1 max-w-md">Pendaftaran peserta didik baru untuk Tahun Ajaran <span id="closed-overlay-year" class="font-bold text-amber-400">2026/2027</span> saat ini belum dibuka / telah ditutup oleh panitia admin sekolah.</p>
+                    </div>
+
+                    <h3 class="font-bold text-lg text-emerald-950 mb-4 flex items-center gap-2 border-b border-emerald-100 pb-3">
+                        <i data-lucide="file-text" class="w-5 h-5 text-emerald-700"></i> Form Pendaftaran Calon Siswa (<span id="form-ppdb-year-label">2026/2027</span>)
+                    </h3>
+                    
+                    <form onsubmit="handlePPDBSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1">NISN (10 Digit) <span class="text-red-500">*</span></label>
+                                <input type="text" id="ppdb-nisn" required maxlength="10" placeholder="Contoh: 0071234567" class="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1">Nama Lengkap Siswa <span class="text-red-500">*</span></label>
+                                <input type="text" id="ppdb-nama" required placeholder="Sesuai ijazah SMP" class="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1">Jenis Kelamin <span class="text-red-500">*</span></label>
+                                <select id="ppdb-jk" required class="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1">Asal Sekolah (SMP/MTs) <span class="text-red-500">*</span></label>
+                                <input type="text" id="ppdb-asal" required placeholder="Contoh: SMPN 55 Jakarta" class="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1">Pilihan Konsentrasi Keahlian <span class="text-red-500">*</span></label>
+                                <select id="ppdb-jurusan" required class="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                                    <option value="Pemasaran (Bisnis Digital)">Pemasaran (Bisnis Digital)</option>
+                                    <option value="Akuntansi & Keuangan">Akuntansi & Keuangan</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1">Nomor WhatsApp Orang Tua/Siswa <span class="text-red-500">*</span></label>
+                                <input type="tel" id="ppdb-hp" required placeholder="08xxxxxxxxxx" class="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-gradient-to-r from-emerald-800 to-emerald-900 hover:from-emerald-900 hover:to-emerald-950 text-amber-300 font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2 border border-amber-500/30">
+                            <i data-lucide="send" class="w-4 h-4 text-amber-400"></i> Kirim Pendaftaran PPDB
+                        </button>
+                    </form>
+                </div>
+
+                <!-- CEK STATUS PPDB -->
+                <div class="lg:col-span-5 bg-emerald-900/60 backdrop-blur-md rounded-2xl p-6 border border-amber-500/30 shadow-lg">
+                    <h3 class="font-bold text-lg text-amber-300 mb-2 flex items-center gap-2">
+                        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i> Cek Status Pendaftaran
+                    </h3>
+                    <p class="text-xs text-emerald-100 mb-4">Masukkan NISN pendaftar untuk mengecek hasil seleksi verifikasi pendaftaran.</p>
+
+                    <div class="space-y-3">
+                        <div class="flex gap-2">
+                            <input type="text" id="check-nisn-input" placeholder="Masukkan NISN Anda..." class="flex-1 px-4 py-2.5 rounded-xl text-slate-900 text-sm focus:outline-none border border-amber-400/40">
+                            <button onclick="checkPPDBStatus()" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold rounded-xl text-xs transition shadow-md">
+                                Cek Status
+                            </button>
+                        </div>
+                        <div id="ppdb-status-result" class="hidden p-4 rounded-xl text-xs">
+                            <!-- Dynamic Result Status -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROSES PEMBELAJARAN, ALAMAT & SEKOLAH SEKITAR -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+            <!-- Proses Pembelajaran -->
+            <div class="lg:col-span-4 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-emerald-800/20 space-y-4">
+                <h3 class="font-bold text-emerald-950 text-lg border-b border-emerald-100 pb-3">Proses Pembelajaran</h3>
+                <div class="space-y-4 text-xs sm:text-sm">
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="contact" class="w-4 h-4 text-emerald-700 mt-0.5"></i>
+                            <div><span class="text-slate-500 block">Rasio Siswa Rombel</span><span class="font-bold text-slate-800 text-base">22</span></div>
+                        </div>
+                        <i data-lucide="info" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="user-check" class="w-4 h-4 text-emerald-700 mt-0.5"></i>
+                            <div><span class="text-slate-500 block">Rasio Siswa Guru</span><span class="font-bold text-slate-800 text-base">29</span></div>
+                        </div>
+                        <i data-lucide="info" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="clock" class="w-4 h-4 text-emerald-700 mt-0.5"></i>
+                            <div><span class="text-slate-500 block">Persentase Guru Kualifikasi</span><span id="proses-guru-kualifikasi" class="font-bold text-slate-800 text-base">85,71%</span></div>
+                        </div>
+                        <i data-lucide="info" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="badge-check" class="w-4 h-4 text-emerald-700 mt-0.5"></i>
+                            <div><span class="text-slate-500 block">Persentase Guru Sertifikasi</span><span id="proses-guru-sertifikasi" class="font-bold text-slate-800 text-base">57,14%</span></div>
+                        </div>
+                        <i data-lucide="info" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alamat & Peta -->
+            <div class="lg:col-span-4 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-emerald-800/20 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-emerald-950 text-lg mb-4">Alamat & Koordinat</h3>
+                    <div class="relative w-full h-40 rounded-xl overflow-hidden mb-4 border border-emerald-200 bg-emerald-50">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=600" alt="Map Preview" class="w-full h-full object-cover opacity-85">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-8 h-8 rounded-full bg-emerald-800 text-amber-300 flex items-center justify-center shadow-lg border-2 border-amber-400 animate-bounce">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-700 leading-relaxed font-medium mb-3">
+                        JL. RAJAWALI SELATAN VI NO. 18, Kec. Sawah Besar, Kota Adm. Jakarta Pusat, Prov. D.K.I. Jakarta
+                    </p>
+                </div>
+                <div class="flex gap-2 pt-2 border-t border-emerald-100">
+                    <a href="https://maps.google.com/?q=-6.1454,106.8396" target="_blank" class="flex-1 py-2 px-3 border border-emerald-700 text-emerald-900 hover:bg-emerald-50 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                        <i data-lucide="map" class="w-3.5 h-3.5 text-emerald-700"></i> Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sekolah Sekitar -->
+            <div class="lg:col-span-4 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-emerald-800/20">
+                <h3 class="font-bold text-emerald-950 text-lg mb-4">Sekolah Sekitar</h3>
+                <div id="nearby-schools-list" class="space-y-3 max-h-[280px] overflow-y-auto pr-1 text-xs">
+                    <!-- Dynamic Items -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER ISLAMIC ELEGANT -->
+    <footer class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-emerald-200 text-xs py-8 border-t-2 border-amber-500/40 mt-12 shadow-2xl">
+        <div class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-amber-300 text-sm">&copy; 2026 SMK AT-TAQWA Jakarta Pusat</p>
+                <p class="text-emerald-300/80 mt-0.5">Yayasan Perguruan Islam At-Taqwa &bull; Portal Kemendikdasmen RI</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="openAdminModal()" class="text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1.5 font-medium">
+                    <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-400"></i> Admin Dashboard (tercyduk1234)
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- MODAL ADMIN SYSTEM PANEL                   -->
+    <!-- ========================================== -->
+    <div id="admin-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="bg-slate-900 text-white p-5 flex justify-between items-center shrink-0 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-emerald-700 rounded-lg text-amber-300 border border-amber-500/40">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold">Admin Management Panel SMK AT-TAQWA</h3>
+                        <p class="text-xs text-slate-400">Kelola Tahun PPDB, Data Pendaftar, Pengumuman, dan Statistik</p>
+                    </div>
+                </div>
+                <button onclick="closeAdminModal()" class="p-1.5 text-slate-400 hover:text-white rounded-lg">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- LOGIN VIEW -->
+            <div id="admin-login-view" class="p-8 text-center max-w-md mx-auto w-full my-auto">
+                <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-amber-100">
+                    <i data-lucide="lock" class="w-7 h-7"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800 mb-1">Otentikasi Pengelola</h4>
+                <p class="text-xs text-slate-500 mb-6">Masukkan password admin untuk membuka dashboard.</p>
+                
+                <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                    <input type="password" id="admin-pass-input" placeholder="Password Admin" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-700 focus:outline-none text-center font-medium text-sm">
+                    <button type="submit" class="w-full py-2.5 bg-emerald-800 hover:bg-emerald-900 text-amber-300 font-bold rounded-xl shadow-md text-sm transition border border-amber-500/30">
+                        Masuk Dashboard Admin
+                    </button>
+                </form>
+                <p class="text-xs text-slate-400 mt-4">Password default: <code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-emerald-800 font-bold">tercyduk1234</code></p>
+            </div>
+
+            <!-- DASHBOARD VIEW -->
+            <div id="admin-dashboard-view" class="hidden flex-grow overflow-y-auto p-6 space-y-6 text-xs">
+                
+                <!-- ADMIN TABS -->
+                <div class="flex border-b border-slate-200 gap-4">
+                    <button onclick="switchAdminTab('ppdb')" id="tab-btn-ppdb" class="py-2 px-4 font-bold border-b-2 border-emerald-700 text-emerald-800">
+                        Data Pendaftar PPDB (<span id="count-ppdb">0</span>)
+                    </button>
+                    <button onclick="switchAdminTab('system')" id="tab-btn-system" class="py-2 px-4 font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+                        Pengaturan Tahun & Gelombang PPDB
+                    </button>
+                    <button onclick="switchAdminTab('announcement')" id="tab-btn-announcement" class="py-2 px-4 font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+                        Kelola Pengumuman (<span id="count-ann">0</span>)
+                    </button>
+                    <button onclick="switchAdminTab('school')" id="tab-btn-school" class="py-2 px-4 font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+                        Profil & Statistik Sekolah
+                    </button>
+                </div>
+
+                <!-- TAB 1: PPDB MANAGEMENT -->
+                <div id="admin-tab-ppdb" class="space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Daftar Calon Siswa Baru (PPDB)</h4>
+                            <p class="text-[11px] text-slate-500">Filter dan kelola persetujuan status pendaftar.</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label class="font-semibold text-slate-600">Filter Tahun Ajaran:</label>
+                            <select id="admin-filter-ppdb-year" onchange="populateAdminTables()" class="px-3 py-1.5 border border-slate-300 rounded-lg bg-white font-semibold">
+                                <option value="semua">Semua Tahun Ajaran</option>
+                                <option value="2026/2027">2026/2027</option>
+                                <option value="2027/2028">2027/2028</option>
+                                <option value="2025/2026">2025/2026</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                                <tr>
+                                    <th class="p-3">NISN</th>
+                                    <th class="p-3">Nama Lengkap</th>
+                                    <th class="p-3">Tahun Ajaran</th>
+                                    <th class="p-3">Asal Sekolah</th>
+                                    <th class="p-3">Jurusan</th>
+                                    <th class="p-3">WhatsApp</th>
+                                    <th class="p-3">Status</th>
+                                    <th class="p-3 text-center">Aksi Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-ppdb-table-body" class="divide-y divide-slate-100">
+                                <!-- Dynamic TR -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SYSTEM PPDB SETTINGS (NEW FEATURE) -->
+                <div id="admin-tab-system" class="hidden space-y-4">
+                    <div class="bg-emerald-50/70 p-5 rounded-xl border border-emerald-200 space-y-4">
+                        <h4 class="font-bold text-emerald-950 text-sm flex items-center gap-2">
+                            <i data-lucide="settings-2" class="w-4 h-4 text-emerald-700"></i> Pengaturan Sistem Pendaftaran PPDB
+                        </h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1">Tahun Ajaran PPDB Aktif</label>
+                                <input type="text" id="admin-input-ppdb-year" placeholder="Contoh: 2026/2027" class="w-full p-2.5 border border-slate-300 rounded-lg text-sm">
+                                <p class="text-[11px] text-slate-500 mt-1">Tahun ajaran ini akan ditampilkan di formulir dan bar navigasi publik.</p>
+                            </div>
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1">Status Pendaftaran / Gelombang</label>
+                                <select id="admin-input-ppdb-status" class="w-full p-2.5 border border-slate-300 rounded-lg text-sm font-semibold">
+                                    <option value="DIBUKA">DIBUKA (Formulir Dapat Diisi)</option>
+                                    <option value="DITUTUP">DITUTUP (Formulir Terkunci)</option>
+                                </select>
+                                <p class="text-[11px] text-slate-500 mt-1">Jika ditutup, formulir pendaftaran publik akan dikunci secara otomatis.</p>
+                            </div>
+                        </div>
+
+                        <button onclick="savePPDBSystemSettings()" class="px-5 py-2.5 bg-emerald-800 hover:bg-emerald-900 text-amber-300 font-bold rounded-xl shadow-md transition flex items-center gap-2 border border-amber-500/30">
+                            <i data-lucide="save" class="w-4 h-4 text-amber-400"></i> Simpan Pengaturan PPDB
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TAB 3: ANNOUNCEMENT MANAGEMENT -->
+                <div id="admin-tab-announcement" class="hidden space-y-4">
+                    <!-- Form Tambah Pengumuman Baru -->
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+                        <h4 class="font-bold text-slate-800 text-sm">Tambah Pengumuman / Event / Ulangan Baru</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div>
+                                <label class="block font-semibold mb-1">Judul Pengumuman</label>
+                                <input type="text" id="new-ann-title" placeholder="Contoh: Jadwal UTS Semester Gasal" class="w-full p-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block font-semibold mb-1">Kategori</label>
+                                <select id="new-ann-cat" class="w-full p-2 border rounded-lg">
+                                    <option value="Event">Event / Kegiatan</option>
+                                    <option value="Ulangan">Ulangan / Ujian</option>
+                                    <option value="Umum">Umum</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block font-semibold mb-1">Tanggal</label>
+                                <input type="text" id="new-ann-date" placeholder="Contoh: 15 Nov 2026" class="w-full p-2 border rounded-lg">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-1">Deskripsi Detail</label>
+                            <textarea id="new-ann-desc" rows="2" placeholder="Detail informasi pengumuman..." class="w-full p-2 border rounded-lg"></textarea>
+                        </div>
+                        <button onclick="addNewAnnouncement()" class="px-4 py-2 bg-emerald-800 text-amber-300 font-bold rounded-lg hover:bg-emerald-900">
+                            + Publish Pengumuman
+                        </button>
+                    </div>
+
+                    <!-- List Tabel Pengumuman Admin -->
+                    <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-slate-100 font-bold border-b border-slate-200">
+                                <tr>
+                                    <th class="p-3">Tanggal</th>
+                                    <th class="p-3">Kategori</th>
+                                    <th class="p-3">Judul</th>
+                                    <th class="p-3">Deskripsi</th>
+                                    <th class="p-3 text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-ann-table-body" class="divide-y divide-slate-100">
+                                <!-- Dynamic TR -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 4: SCHOOL DATA -->
+                <div id="admin-tab-school" class="hidden space-y-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div>
+                            <label class="block font-bold mb-1">Jumlah Guru</label>
+                            <input type="number" id="edit-stat-guru" class="w-full p-2 border rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-1">Siswa Laki-laki</label>
+                            <input type="number" id="edit-stat-siswa-lk" class="w-full p-2 border rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-1">Siswa Perempuan</label>
+                            <input type="number" id="edit-stat-siswa-pr" class="w-full p-2 border rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-1">Jumlah Rombel</label>
+                            <input type="number" id="edit-stat-rombel" class="w-full p-2 border rounded-lg">
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="saveSchoolStatsData()" class="px-4 py-2 bg-emerald-800 text-amber-300 font-bold rounded-lg">
+                            Simpan Statistik Sekolah
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div id="admin-footer-view" class="hidden bg-slate-50 border-t border-slate-200 p-4 flex justify-between items-center shrink-0">
+                <button onclick="handleAdminLogout()" class="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold hover:bg-slate-300">
+                    Logout Admin
+                </button>
+                <button onclick="resetAllToDefault()" class="px-3 py-1.5 border border-red-200 text-red-600 hover:bg-red-50 rounded-lg text-xs font-semibold">
+                    Reset Data Sistem
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3 border border-slate-700 text-xs">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+        <span id="toast-message">Notifikasi berhasil diproses.</span>
+    </div>
+
+    <!-- SCRIPT APPLICATION & LOCALSTORAGE LOGIC -->
+    <script>
+        // Initializer Data
+        const DEFAULT_DATA = {
+            activePPDBYear: "2026/2027",
+            isPPDBOpen: "DIBUKA",
+            statGuru: 7,
+            statSiswaLk: 92,
+            statSiswaPr: 106,
+            statRombel: 9,
+            announcements: [
+                {
+                    id: 1,
+                    cat: 'Ulangan',
+                    date: '16 Nov 2026',
+                    title: 'Pelaksanaan Penilaian Akhir Semester (PAS) Gasal',
+                    desc: 'Diberitahukan kepada seluruh siswa kelas X, XI, dan XII bahwa PAS Gasal akan dilaksanakan berbasis Komputer/CBT.'
+                },
+                {
+                    id: 2,
+                    cat: 'Event',
+                    date: '25 Nov 2026',
+                    title: 'Peringatan Hari Guru Nasional & Pentas Seni',
+                    desc: 'Kegiatan upacara bendera dilanjutkan dengan pentas seni kreasi siswa SMK At-Taqwa di lapangan utama.'
+                },
+                {
+                    id: 3,
+                    cat: 'Umum',
+                    date: '01 Des 2026',
+                    title: 'Penerimaan Peserta Didik Baru (PPDB) Gelombang 1',
+                    desc: 'Pendaftaran calon siswa baru SMK At-Taqwa TA 2026/2027 telah dibuka secara online.'
+                }
+            ],
+            ppdbApplicants: [
+                { nisn: '0071234567', nama: 'Budi Santoso', jk: 'Laki-laki', asal: 'SMPN 55 Jakarta', jurusan: 'Pemasaran (Bisnis Digital)', hp: '081234567890', status: 'Diterima', year: '2026/2027' },
+                { nisn: '0079876543', nama: 'Siti Aminah', jk: 'Perempuan', asal: 'MTs At-Taqwa', jurusan: 'Akuntansi & Keuangan', hp: '089876543210', status: 'Menunggu', year: '2026/2027' }
+            ],
+            nearbySchools: [
+                { name: "SMP At-Taqwa", code: "S", distance: "0.00 km" },
+                { name: "SMA AT-TAQWA", code: "S", distance: "0.00 km" },
+                { name: "SD AT-TAQWA", code: "S", distance: "0.00 km" },
+                { name: "RA AT TAQWA", code: "S", distance: "0.02 km" },
+                { name: "SDN GUNUNG SAHARI UTARA 01", code: "N", distance: "0.04 km" },
+                { name: "SMKS STRADA JAKARTA", code: "S", distance: "0.10 km" }
+            ]
+        };
+
+        let appData = {};
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadStorage();
+            renderApp();
+            lucide.createIcons();
+        });
+
+        function loadStorage() {
+            const saved = localStorage.getItem('smk_attaqwa_full_app_data');
+            if (saved) {
+                try {
+                    appData = JSON.parse(saved);
+                } catch(e) {
+                    appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+                }
+            } else {
+                appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+            }
+        }
+
+        function saveStorage() {
+            localStorage.setItem('smk_attaqwa_full_app_data', JSON.stringify(appData));
+            renderApp();
+        }
+
+        function renderApp() {
+            // Render Stats
+            document.getElementById('stat-guru').innerText = appData.statGuru;
+            document.getElementById('stat-siswa-lk').innerText = appData.statSiswaLk;
+            document.getElementById('stat-siswa-pr').innerText = appData.statSiswaPr;
+            document.getElementById('stat-rombel').innerText = appData.statRombel;
+
+            // Render PPDB System Status in Frontend
+            const yearStr = appData.activePPDBYear || "2026/2027";
+            const isOpen = (appData.isPPDBOpen || "DIBUKA") === "DIBUKA";
+
+            document.getElementById('top-bar-ppdb-year').innerText = yearStr;
+            document.getElementById('display-ppdb-year').innerText = yearStr;
+            document.getElementById('form-ppdb-year-label').innerText = yearStr;
+            document.getElementById('closed-overlay-year').innerText = yearStr;
+
+            const badge = document.getElementById('ppdb-status-badge-public');
+            const overlay = document.getElementById('ppdb-closed-overlay');
+
+            if (isOpen) {
+                badge.innerText = "STATUS: DIBUKA";
+                badge.className = "bg-emerald-500 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full shadow-sm";
+                overlay.classList.add('hidden');
+            } else {
+                badge.innerText = "STATUS: DITUTUP";
+                badge.className = "bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm";
+                overlay.classList.remove('hidden');
+            }
+
+            // Render Announcements
+            renderAnnouncements('semua');
+
+            // Render Nearby Schools
+            const schoolBox = document.getElementById('nearby-schools-list');
+            schoolBox.innerHTML = '';
+            (appData.nearbySchools || []).forEach(s => {
+                const item = document.createElement('div');
+                item.className = "flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent";
+                item.innerHTML = `
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-7 h-7 rounded-full ${s.code === 'N' ? 'bg-blue-100 text-blue-600' : 'bg-amber-100 text-amber-600'} font-bold flex items-center justify-center text-[11px]">
+                            ${s.code}
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-slate-800 text-xs">${s.name}</h5>
+                            <span class="text-[10px] text-slate-400">${s.distance}</span>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-300"></i>
+                `;
+                schoolBox.appendChild(item);
+            });
+
+            lucide.createIcons();
+        }
+
+        // ==========================================
+        // ANNOUNCEMENT CONTROLLER
+        // ==========================================
+        function renderAnnouncements(category) {
+            const container = document.getElementById('announcement-display-list');
+            container.innerHTML = '';
+
+            const filtered = category === 'semua' 
+                ? appData.announcements 
+                : appData.announcements.filter(a => a.cat === category);
+
+            if(filtered.length === 0) {
+                container.innerHTML = `<p class="text-xs text-slate-400 col-span-3 text-center py-4">Belum ada pengumuman untuk kategori ini.</p>`;
+                return;
+            }
+
+            filtered.forEach(a => {
+                const card = document.createElement('div');
+                card.className = "p-4 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-sm transition flex flex-col justify-between";
+                
+                const catColor = a.cat === 'Event' ? 'bg-emerald-100 text-emerald-700' : (a.cat === 'Ulangan' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700');
+                
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${catColor}">${a.cat}</span>
+                            <span class="text-[11px] text-slate-400 flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> ${a.date}</span>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-sm mb-1">${a.title}</h4>
+                        <p class="text-xs text-slate-600 line-clamp-3">${a.desc}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        function filterAnnouncements(cat) {
+            document.querySelectorAll('.ann-filter-btn').forEach(b => {
+                if(b.getAttribute('data-cat') === cat) {
+                    b.className = "ann-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-800 text-amber-300 shadow-sm border border-amber-500/30";
+                } else {
+                    b.className = "ann-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200";
+                }
+            });
+            renderAnnouncements(cat);
+        }
+
+        // ==========================================
+        // PPDB CONTROLLER (PUBLIC)
+        // ==========================================
+        function handlePPDBSubmit(e) {
+            e.preventDefault();
+            if((appData.isPPDBOpen || "DIBUKA") !== "DIBUKA") {
+                alert("Pendaftaran PPDB saat ini sedang ditutup.");
+                return;
+            }
+
+            const nisn = document.getElementById('ppdb-nisn').value.trim();
+            const nama = document.getElementById('ppdb-nama').value.trim();
+            const jk = document.getElementById('ppdb-jk').value;
+            const asal = document.getElementById('ppdb-asal').value.trim();
+            const jurusan = document.getElementById('ppdb-jurusan').value;
+            const hp = document.getElementById('ppdb-hp').value.trim();
+            const currentYear = appData.activePPDBYear || "2026/2027";
+
+            const exists = appData.ppdbApplicants.some(a => a.nisn === nisn);
+            if(exists) {
+                alert("NISN " + nisn + " sudah terdaftar di sistem!");
+                return;
+            }
+
+            const newApplicant = { nisn, nama, jk, asal, jurusan, hp, status: 'Menunggu', year: currentYear };
+            appData.ppdbApplicants.push(newApplicant);
+            saveStorage();
+
+            document.getElementById('ppdb-nisn').value = '';
+            document.getElementById('ppdb-nama').value = '';
+            document.getElementById('ppdb-asal').value = '';
+            document.getElementById('ppdb-hp').value = '';
+
+            showToast("Pendaftaran PPDB Berhasil! Simpan NISN " + nisn + " Anda.");
+        }
+
+        function checkPPDBStatus() {
+            const nisnInput = document.getElementById('check-nisn-input').value.trim();
+            const resultBox = document.getElementById('ppdb-status-result');
+            resultBox.classList.remove('hidden');
+
+            const found = appData.ppdbApplicants.find(a => a.nisn === nisnInput);
+            if(found) {
+                let badge = found.status === 'Diterima' ? 'bg-emerald-500 text-white' : (found.status === 'Ditolak' ? 'bg-red-500 text-white' : 'bg-amber-500 text-white');
+                resultBox.className = "p-4 rounded-xl text-xs bg-white text-slate-800 shadow-md border border-slate-200 space-y-1";
+                resultBox.innerHTML = `
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-slate-900 text-sm">${found.nama}</span>
+                        <span class="px-2 py-0.5 rounded text-[11px] font-bold ${badge}">${found.status}</span>
+                    </div>
+                    <p class="text-slate-500">NISN: ${found.nisn} | Asal: ${found.asal}</p>
+                    <p class="text-slate-500">Tahun PPDB: <strong>${found.year || '2026/2027'}</strong></p>
+                    <p class="text-slate-500">Pilihan Jurusan: <strong>${found.jurusan}</strong></p>
+                `;
+            } else {
+                resultBox.className = "p-3 rounded-xl text-xs bg-red-500/20 text-red-200 border border-red-500/30";
+                resultBox.innerText = "Data NISN " + nisnInput + " tidak ditemukan dalam berkas pendaftaran PPDB.";
+            }
+        }
+
+        // ==========================================
+        // ADMIN MANAGEMENT PANEL
+        // ==========================================
+        function openAdminModal() {
+            document.getElementById('admin-modal').classList.remove('hidden');
+            checkAdminSession();
+        }
+
+        function closeAdminModal() {
+            document.getElementById('admin-modal').classList.add('hidden');
+        }
+
+        function checkAdminSession() {
+            const isLoggedIn = sessionStorage.getItem('is_admin_logged_in') === 'true';
+            if (isLoggedIn) {
+                document.getElementById('admin-login-view').classList.add('hidden');
+                document.getElementById('admin-dashboard-view').classList.remove('hidden');
+                document.getElementById('admin-footer-view').classList.remove('hidden');
+                populateAdminTables();
+            } else {
+                document.getElementById('admin-login-view').classList.remove('hidden');
+                document.getElementById('admin-dashboard-view').classList.add('hidden');
+                document.getElementById('admin-footer-view').classList.add('hidden');
+            }
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const pass = document.getElementById('admin-pass-input').value;
+            if (pass === 'tercyduk1234') {
+                sessionStorage.setItem('is_admin_logged_in', 'true');
+                checkAdminSession();
+                showToast("Login Admin Berhasil.");
+            } else {
+                alert("Password Admin Salah!");
+            }
+        }
+
+        function handleAdminLogout() {
+            sessionStorage.removeItem('is_admin_logged_in');
+            checkAdminSession();
+        }
+
+        function switchAdminTab(tab) {
+            document.getElementById('admin-tab-ppdb').classList.add('hidden');
+            document.getElementById('admin-tab-system').classList.add('hidden');
+            document.getElementById('admin-tab-announcement').classList.add('hidden');
+            document.getElementById('admin-tab-school').classList.add('hidden');
+
+            document.getElementById('tab-btn-ppdb').className = "py-2 px-4 font-bold border-b-2 border-transparent text-slate-500";
+            document.getElementById('tab-btn-system').className = "py-2 px-4 font-bold border-b-2 border-transparent text-slate-500";
+            document.getElementById('tab-btn-announcement').className = "py-2 px-4 font-bold border-b-2 border-transparent text-slate-500";
+            document.getElementById('tab-btn-school').className = "py-2 px-4 font-bold border-b-2 border-transparent text-slate-500";
+
+            if(tab === 'ppdb') {
+                document.getElementById('admin-tab-ppdb').classList.remove('hidden');
+                document.getElementById('tab-btn-ppdb').className = "py-2 px-4 font-bold border-b-2 border-emerald-700 text-emerald-800";
+            } else if(tab === 'system') {
+                document.getElementById('admin-tab-system').classList.remove('hidden');
+                document.getElementById('tab-btn-system').className = "py-2 px-4 font-bold border-b-2 border-emerald-700 text-emerald-800";
+            } else if(tab === 'announcement') {
+                document.getElementById('admin-tab-announcement').classList.remove('hidden');
+                document.getElementById('tab-btn-announcement').className = "py-2 px-4 font-bold border-b-2 border-emerald-700 text-emerald-800";
+            } else if(tab === 'school') {
+                document.getElementById('admin-tab-school').classList.remove('hidden');
+                document.getElementById('tab-btn-school').className = "py-2 px-4 font-bold border-b-2 border-emerald-700 text-emerald-800";
+            }
+        }
+
+        function populateAdminTables() {
+            document.getElementById('count-ppdb').innerText = appData.ppdbApplicants.length;
+            document.getElementById('count-ann').innerText = appData.announcements.length;
+
+            // PPDB System Input Values
+            document.getElementById('admin-input-ppdb-year').value = appData.activePPDBYear || "2026/2027";
+            document.getElementById('admin-input-ppdb-status').value = appData.isPPDBOpen || "DIBUKA";
+
+            // PPDB Table Filtering
+            const yearFilter = document.getElementById('admin-filter-ppdb-year').value;
+            const ppdbBody = document.getElementById('admin-ppdb-table-body');
+            ppdbBody.innerHTML = '';
+
+            const list = yearFilter === 'semua'
+                ? appData.ppdbApplicants
+                : appData.ppdbApplicants.filter(a => (a.year || '2026/2027') === yearFilter);
+
+            list.forEach((item, index) => {
+                const realIndex = appData.ppdbApplicants.indexOf(item);
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3 font-mono font-bold">${item.nisn}</td>
+                    <td class="p-3 font-semibold">${item.nama} (${item.jk})</td>
+                    <td class="p-3 font-semibold text-emerald-800">${item.year || '2026/2027'}</td>
+                    <td class="p-3">${item.asal}</td>
+                    <td class="p-3">${item.jurusan}</td>
+                    <td class="p-3 font-mono">${item.hp}</td>
+                    <td class="p-3">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.status === 'Diterima' ? 'bg-emerald-100 text-emerald-700' : (item.status === 'Ditolak' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700')}">
+                            ${item.status}
+                        </span>
+                    </td>
+                    <td class="p-3 text-center space-x-1">
+                        <button onclick="updatePPDBStatus(${realIndex}, 'Diterima')" class="px-2 py-1 bg-emerald-600 text-white rounded text-[10px]">Terima</button>
+                        <button onclick="updatePPDBStatus(${realIndex}, 'Ditolak')" class="px-2 py-1 bg-red-600 text-white rounded text-[10px]">Tolak</button>
+                        <button onclick="deletePPDBApplicant(${realIndex})" class="px-2 py-1 bg-slate-300 text-slate-700 rounded text-[10px]">Hapus</button>
+                    </td>
+                `;
+                ppdbBody.appendChild(tr);
+            });
+
+            // Announcement Table
+            const annBody = document.getElementById('admin-ann-table-body');
+            annBody.innerHTML = '';
+            appData.announcements.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3 font-mono">${item.date}</td>
+                    <td class="p-3 font-bold text-emerald-800">${item.cat}</td>
+                    <td class="p-3 font-semibold">${item.title}</td>
+                    <td class="p-3 text-slate-500 max-w-xs truncate">${item.desc}</td>
+                    <td class="p-3 text-center">
+                        <button onclick="deleteAnnouncement(${index})" class="px-2 py-1 bg-red-600 text-white rounded text-[10px]">Hapus</button>
+                    </td>
+                `;
+                annBody.appendChild(tr);
+            });
+
+            // Populate School Stats Input
+            document.getElementById('edit-stat-guru').value = appData.statGuru;
+            document.getElementById('edit-stat-siswa-lk').value = appData.statSiswaLk;
+            document.getElementById('edit-stat-siswa-pr').value = appData.statSiswaPr;
+            document.getElementById('edit-stat-rombel').value = appData.statRombel;
+        }
+
+        function savePPDBSystemSettings() {
+            const yearVal = document.getElementById('admin-input-ppdb-year').value.trim();
+            const statusVal = document.getElementById('admin-input-ppdb-status').value;
+
+            if(!yearVal) {
+                alert("Harap isi tahun ajaran PPDB!");
+                return;
+            }
+
+            appData.activePPDBYear = yearVal;
+            appData.isPPDBOpen = statusVal;
+            saveStorage();
+            showToast("Pengaturan PPDB (Tahun: " + yearVal + ", Status: " + statusVal + ") disimpan.");
+        }
+
+        function updatePPDBStatus(index, newStatus) {
+            appData.ppdbApplicants[index].status = newStatus;
+            saveStorage();
+            populateAdminTables();
+            showToast("Status pendaftar " + appData.ppdbApplicants[index].nama + " diubah ke " + newStatus);
+        }
+
+        function deletePPDBApplicant(index) {
+            if(confirm("Hapus pendaftar ini dari database PPDB?")) {
+                appData.ppdbApplicants.splice(index, 1);
+                saveStorage();
+                populateAdminTables();
+            }
+        }
+
+        function addNewAnnouncement() {
+            const title = document.getElementById('new-ann-title').value.trim();
+            const cat = document.getElementById('new-ann-cat').value;
+            const date = document.getElementById('new-ann-date').value.trim();
+            const desc = document.getElementById('new-ann-desc').value.trim();
+
+            if(!title || !date || !desc) {
+                alert("Harap lengkapi judul, tanggal, dan deskripsi pengumuman.");
+                return;
+            }
+
+            appData.announcements.unshift({ id: Date.now(), title, cat, date, desc });
+            saveStorage();
+            populateAdminTables();
+
+            document.getElementById('new-ann-title').value = '';
+            document.getElementById('new-ann-date').value = '';
+            document.getElementById('new-ann-desc').value = '';
+
+            showToast("Pengumuman baru berhasil di-publish.");
+        }
+
+        function deleteAnnouncement(index) {
+            if(confirm("Hapus pengumuman ini?")) {
+                appData.announcements.splice(index, 1);
+                saveStorage();
+                populateAdminTables();
+            }
+        }
+
+        function saveSchoolStatsData() {
+            appData.statGuru = parseInt(document.getElementById('edit-stat-guru').value) || 0;
+            appData.statSiswaLk = parseInt(document.getElementById('edit-stat-siswa-lk').value) || 0;
+            appData.statSiswaPr = parseInt(document.getElementById('edit-stat-siswa-pr').value) || 0;
+            appData.statRombel = parseInt(document.getElementById('edit-stat-rombel').value) || 0;
+
+            saveStorage();
+            showToast("Statistik sekolah diperbarui.");
+        }
+
+        function resetAllToDefault() {
+            if(confirm("Apakah Anda yakin ingin me-reset seluruh data kembali ke setelan pabrik?")) {
+                appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+                saveStorage();
+                populateAdminTables();
+                showToast("Sistem telah di-reset ke data awal.");
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
